@@ -35,7 +35,7 @@ namespace RemoteForkAndroid.Plugins
             Version = "0.1.a";
             Author = "ORAMAN";
             Name = "RuTracker";
-            Description = "Воспроизведение файлов TORRENT через меда-сервер Ace Stream";
+            Description = "Р’РѕСЃРїСЂРѕРёР·РІРµРґРµРЅРёРµ С„Р°Р№Р»РѕРІ TORRENT С‡РµСЂРµР· РјРµРґР°-СЃРµСЂРІРµСЂ Ace Stream";
             ImageLink = "http://s1.iconbird.com/ico/1012/AmpolaIcons/w256h2561350597291videofile.png";
         }
 
@@ -196,7 +196,7 @@ namespace RemoteForkAndroid.Plugins
             System.Collections.Generic.List<Item> items = new System.Collections.Generic.List<Item>();
             Item Item = new Item();
 
-            Item.Name = "Поиск";
+            Item.Name = "РџРѕРёСЃРє";
             Item.Link = "Search_rutracker";
             Item.Type = ItemType.DIRECTORY;
             Item.SearchOn = "search_on";
@@ -291,7 +291,7 @@ namespace RemoteForkAndroid.Plugins
             else
             {
                 Item Item = new Item();
-                Item.Name = "Ничего не найдено";
+                Item.Name = "РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ";
                 Item.Link = "";
 
                 items.Add(Item);
@@ -307,7 +307,7 @@ namespace RemoteForkAndroid.Plugins
             try
             {
                 System.Text.RegularExpressions.Regex Regex = new System.Text.RegularExpressions.Regex("(?<=" + LinkID + "\">).*?(?=<)");
-                SizeFile = "<p> Размер: <b>" + Regex.Matches(HTML)[1].Value + "</b>";
+                SizeFile = "<p> Р Р°Р·РјРµСЂ: <b>" + Regex.Matches(HTML)[1].Value + "</b>";
             }
             catch (Exception ex)
             {
@@ -326,7 +326,7 @@ namespace RemoteForkAndroid.Plugins
             string Seeders = null;
             try
             {
-                System.Text.RegularExpressions.Regex Regex = new System.Text.RegularExpressions.Regex("(?<=title=\"Сидов\">).*?(?=<)");
+                System.Text.RegularExpressions.Regex Regex = new System.Text.RegularExpressions.Regex("(?<=title=\"РЎРёРґРѕРІ\">).*?(?=<)");
                 Seeders = "<p> Seeders: <b> " + Regex.Matches(HTML)[0].Value + "</b>";
             }
             catch (Exception ex)
@@ -336,7 +336,7 @@ namespace RemoteForkAndroid.Plugins
             string Leechers = null;
             try
             {
-                System.Text.RegularExpressions.Regex Regex = new System.Text.RegularExpressions.Regex("(?<=title=\"Личей\">).*?(?=<)");
+                System.Text.RegularExpressions.Regex Regex = new System.Text.RegularExpressions.Regex("(?<=title=\"Р›РёС‡РµР№\">).*?(?=<)");
                 Leechers = "<p> Leechers: <b> " + Regex.Matches(HTML)[0].Value + "</b>";
             }
             catch (Exception ex)
@@ -395,7 +395,7 @@ namespace RemoteForkAndroid.Plugins
             WC.Encoding = System.Text.Encoding.UTF8;
 
             string[] CodeZnaki = { "\\U0430", "\\U0431", "\\U0432", "\\U0433", "\\U0434", "\\U0435", "\\U0451", "\\U0436", "\\U0437", "\\U0438", "\\U0439", "\\U043A", "\\U043B", "\\U043C", "\\U043D", "\\U043E", "\\U043F", "\\U0440", "\\U0441", "\\U0442", "\\U0443", "\\U0444", "\\U0445", "\\U0446", "\\U0447", "\\U0448", "\\U0449", "\\U044A", "\\U044B", "\\U044C", "\\U044D", "\\U044E", "\\U044F", "\\U0410", "\\U0411", "\\U0412", "\\U0413", "\\U0414", "\\U0415", "\\U0401", "\\U0416", "\\U0417", "\\U0418", "\\U0419", "\\U041A", "\\U041B", "\\U041C", "\\U041D", "\\U041E", "\\U041F", "\\U0420", "\\U0421", "\\U0422", "\\U0423", "\\U0424", "\\U0425", "\\U0426", "\\U0427", "\\U0428", "\\U0429", "\\U042A", "\\U042B", "\\U042C", "\\U042D", "\\U042E", "\\U042F", "\\U00AB", "\\U00BB", "U2116" };
-            string[] DecodeZnaki = { "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я", "А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", "Э", "Ю", "Я", "«", "»", "№" };
+            string[] DecodeZnaki = { "Р°", "Р±", "РІ", "Рі", "Рґ", "Рµ", "С‘", "Р¶", "Р·", "Рё", "Р№", "Рє", "Р»", "Рј", "РЅ", "Рѕ", "Рї", "СЂ", "СЃ", "С‚", "Сѓ", "С„", "С…", "С†", "С‡", "С€", "С‰", "СЉ", "С‹", "СЊ", "СЌ", "СЋ", "СЏ", "Рђ", "Р‘", "Р’", "Р“", "Р”", "Р•", "РЃ", "Р–", "Р—", "Р", "Р™", "Рљ", "Р›", "Рњ", "Рќ", "Рћ", "Рџ", "Р ", "РЎ", "Рў", "РЈ", "Р¤", "РҐ", "Р¦", "Р§", "РЁ", "Р©", "РЄ", "Р«", "Р¬", "Р­", "Р®", "РЇ", "В«", "В»", "в„–" };
 
             string ContentID = GetID(PathTorrent, ServerAdress);
             string ItogStr = WC.DownloadString("http://" + ServerAdress + ":" + PortAce + "/server/api?method=get_media_files&content_id=" + ContentID);

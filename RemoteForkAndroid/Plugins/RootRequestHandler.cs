@@ -39,8 +39,8 @@ namespace RemoteForkAndroid.Plugins
                     {
                         if (drive.IsReady)
                         {
-                            string mainText = $"{drive.Name} ({Tools.FSize(drive.AvailableFreeSpace)} свободно из {Tools.FSize(drive.TotalSize)})";
-                            string subText = $"<br>Метка диска: {drive.VolumeLabel}<br>Тип носителя: {drive.DriveType}";
+                            string mainText = $"{drive.Name} ({Tools.FSize(drive.AvailableFreeSpace)} СЃРІРѕР±РѕРґРЅРѕ РёР· {Tools.FSize(drive.TotalSize)})";
+                            string subText = $"<br>РњРµС‚РєР° РґРёСЃРєР°: {drive.VolumeLabel}<br>РўРёРї РЅРѕСЃРёС‚РµР»СЏ: {drive.DriveType}";
 
                             result.Add(new Item
                             {
